@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Caromancie — Lectures de Tarot & Divination</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Georgia', serif;
+      background: linear-gradient(135deg, #0f0f1e 0%, #1a0f2e 100%);
+      color: #e8e8e8;
+      line-height: 1.6;
+      min-height: 100vh;
+    }
+
+    header {
+      background: rgba(15, 15, 30, 0.95);
+      border-bottom: 2px solid #d4af37;
+      padding: 1.5rem 0;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    .container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 0 2rem;
+    }
+
+    header .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    h1 {
+      font-size: 2rem;
+      color: #d4af37;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    nav a {
+      color: #e8e8e8;
+      text-decoration: none;
+      margin-left: 2rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #d4af37;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 8rem 2rem 6rem;
+      background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+    }
+
+    .hero h2 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      color: #d4af37;
+      text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+    }
+
+    .hero p {
+      font-size: 1.3rem;
+      color: #b8b8d8;
+      margin-bottom: 2rem;
+      max-width: 600px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: linear-gradient(135deg, #d4af37 0%, #f0d870 100%);
+      color: #0f0f1e;
+      padding: 1rem 2.5rem;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      transition: all 0.3s;
+      border: 2px solid #d4af37;
+    }
+
+    .cta-button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+    }
+
+    .services {
+      padding: 6rem 2rem;
+      background: rgba(26, 15, 46, 0.5);
+    }
+
+    .services h3 {
+      text-align: center;
+      font-size: 2.5rem;
+      color: #d4af37;
+      margin-bottom: 3rem;
+    }
+
+    .service-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+    }
+
+    .service-card {
+      background: rgba(212, 175, 55, 0.05);
+      border: 1px solid #d4af37;
+      border-radius: 10px;
+      padding: 2rem;
+      text-align: center;
+      transition: all 0.3s;
+    }
+
+    .service-card:hover {
+      background: rgba(212, 175, 55, 0.15);
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
+    }
+
+    .service-icon {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+    }
+
+    .service-card h4 {
+      color: #d4af37;
+      margin-bottom: 1rem;
+      font-size: 1.3rem;
+    }
+
+    .service-card p {
+      color: #b8b8d8;
+      font-size: 0.95rem;
+    }
+
+    footer {
+      background: rgba(15, 15, 30, 0.95);
+      border-top: 2px solid #d4af37;
+      padding: 2rem;
+      text-align: center;
+      color: #888;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.5rem;
+      }
+
+      nav a {
+        margin-left: 1rem;
+        font-size: 0.9rem;
+      }
+
+      .hero h2 {
+        font-size: 2rem;
+      }
+
+      .services h3 {
+        font-size: 1.8rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>&#x2727; Caromancie</h1>
+      <nav>
+        <a href="#services">Services</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <h2>Devoilez vos mysteres</h2>
+      <p>Explorez les messages caches du tarot et des cartes. Des lectures intuitives pour illuminer votre chemin.</p>
+      <a href="#contact" class="cta-button">Reserver une lecture</a>
+    </section>
+
+    <section class="services" id="services">
+      <h3>Nos Services</h3>
+      <div class="service-grid">
+        <div class="service-card">
+          <div class="service-icon">&#x2665;</div>
+          <h4>Tarot Amour</h4>
+          <p>Explorez les dynamiques romantiques et les connexions emotionnelles qui vous attendent.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#x272F;</div>
+          <h4>Tarot Destinee</h4>
+          <p>Recevez des guidances sur votre chemin de vie et les opportunites qui s'offrent a vous.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#x269E;</div>
+          <h4>Numerologie</h4>
+          <p>Decouvrez les vibrations et messages caches dans vos nombres personnels.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon">&#x25CF;</div>
+          <h4>Guidance Intuitive</h4>
+          <p>Laissez-vous guider par l'intuition pour trouver les reponses que vous cherchez.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <div class="container">
+      <p>Caromancie &copy; 2026 — Lectures authentiques et guidances intuitives</p>
+      <p style="margin-top: 1rem; font-size: 0.9rem;">Prochainement : reservations et consultations en ligne</p>
+    </div>
+  </footer>
+</body>
+</html>
