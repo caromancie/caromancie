@@ -24,6 +24,8 @@ Quand tu changes un fichier et que tu le "pousse" sur GitHub, Cloudflare voit ç
 # Dans le terminal, va dans le dossier du projet
 cd /Users/arnaudchretien/chatbotdev/MURMUR/Murmure_LIT_fev26/projets/caromancie
 
+#enfin, ça c'est pour tonton, Carole tu dois faire ça dans ton répertoire de travail
+
 # Ouvre VSCode
 code .
 ```
@@ -36,9 +38,10 @@ Voilà ! Tu vois maintenant ton projet. Le dossier `public/` c'est où vivent te
 - **styles inline** → les couleurs et le design (dans le `<style>` du HTML)
 - **scripts inline** → les interactions et animations (dans le `<script>` du HTML)
 
-Ouvre `public/index.html`, modifie ce que tu veux, et **sauvegarde** (Cmd+S sur Mac).
+Ouvre `public/index.html`, modifie ce que tu veux, et **sauvegarde** (Cmd+S sur Mac ou Ctrl+S sur Windows).
 
 **Exemple** : Tu veux changer la couleur d'or (doré) en argent ?
+Demande à ton LLM préféré (Claude, moi, ou un autre) de te trouver le code couleur de l'argent, puis :
 - Trouve `#d4af37` (c'est le code couleur de l'or)
 - Remplace par `#c0c0c0` (argent)
 - Sauvegarde !
@@ -55,7 +58,7 @@ Avant d'envoyer sur internet, tu peux checker comment ça ressemble sur ton ordi
 
 Ou plus simple : ouvre le fichier dans le navigateur (File → Open File).
 
-**Important** : Si tu changes le CSS ou le JS, tu peux avoir besoin de rafraîchir la page (Cmd+R sur Mac) pour voir les changements.
+**Important** : Si tu changes le CSS ou le JS, tu peux avoir besoin de rafraîchir la page (Cmd+R sur Mac ou Ctrl+R sur Windows) pour voir les changements.
 
 ### Étape 4 : "Commiter" tes changements (Git speak pour "sauvegarder sur GitHub")
 
@@ -92,7 +95,7 @@ To https://github.com/bobume/caromancie.git
 
 ✅ **C'est good!** Tes changements sont sur GitHub.
 
-### Étape 6 : Vérifier que c'est en live
+### Étape 6 : Vérifier que c'est en live sur caromancie.be
 
 Attends 30-60 secondes, puis :
 

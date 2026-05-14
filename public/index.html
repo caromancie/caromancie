@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Caromancie — Lectures de Tarot & Divination</title>
+  <title>Caromancie — Consultations & Guidances</title>
   <style>
     * {
       margin: 0;
@@ -12,16 +12,16 @@
     }
 
     body {
-      font-family: 'Georgia', serif;
-      background: linear-gradient(135deg, #0f0f1e 0%, #1a0f2e 100%);
-      color: #e8e8e8;
-      line-height: 1.6;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Helvetica Neue', sans-serif;
+      background: #fafbfc;
+      color: #2d3748;
+      line-height: 1.7;
       min-height: 100vh;
     }
 
     header {
-      background: rgba(15, 15, 30, 0.95);
-      border-bottom: 2px solid #d4af37;
+      background: #fff;
+      border-bottom: 1px solid #e2e8f0;
       padding: 1.5rem 0;
       position: sticky;
       top: 0;
@@ -41,135 +41,186 @@
     }
 
     h1 {
-      font-size: 2rem;
-      color: #d4af37;
-      letter-spacing: 2px;
-      text-transform: uppercase;
+      font-size: 1.8rem;
+      color: #4a5f7f;
+      font-weight: 600;
+      letter-spacing: 0.5px;
     }
 
     nav a {
-      color: #e8e8e8;
+      color: #4a5f7f;
       text-decoration: none;
-      margin-left: 2rem;
+      margin-left: 2.5rem;
+      font-size: 0.95rem;
       transition: color 0.3s;
+      font-weight: 500;
     }
 
     nav a:hover {
-      color: #d4af37;
+      color: #7a9abd;
     }
 
     .hero {
-      text-align: center;
-      padding: 8rem 2rem 6rem;
-      background: radial-gradient(ellipse at center, rgba(212, 175, 55, 0.1) 0%, transparent 70%);
+      background: linear-gradient(135deg, #f0f4f8 0%, #ffffff 100%);
+      padding: 4rem 2rem 3rem;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 3rem;
+      align-items: center;
     }
 
-    .hero h2 {
-      font-size: 3rem;
+    .hero-content h2 {
+      font-size: 2.5rem;
+      color: #2d3748;
       margin-bottom: 1rem;
-      color: #d4af37;
-      text-shadow: 0 0 20px rgba(212, 175, 55, 0.3);
+      font-weight: 700;
+      line-height: 1.2;
     }
 
-    .hero p {
-      font-size: 1.3rem;
-      color: #b8b8d8;
+    .hero-content p {
+      font-size: 1.1rem;
+      color: #4a5f7f;
+      margin-bottom: 2rem;
+      line-height: 1.8;
+    }
+
+    .hero-image {
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(74, 95, 127, 0.12);
+    }
+
+    .hero-image img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #4a5f7f;
+      color: #fff;
+      padding: 0.95rem 2rem;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: 600;
+      transition: all 0.3s;
+      border: none;
+      cursor: pointer;
+      font-size: 0.95rem;
+    }
+
+    .cta-button:hover {
+      background: #556b8f;
+      transform: translateY(-2px);
+      box-shadow: 0 8px 24px rgba(74, 95, 127, 0.2);
+    }
+
+    .philosophy {
+      padding: 5rem 2rem;
+      background: #fff;
+    }
+
+    .philosophy h3 {
+      text-align: center;
+      font-size: 2rem;
+      color: #2d3748;
+      margin-bottom: 3rem;
+      font-weight: 700;
+    }
+
+    .philosophy-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 2.5rem;
+    }
+
+    .philosophy-card {
+      padding: 2.5rem;
+      background: #f8fafc;
+      border-radius: 12px;
+      border: 1px solid #e2e8f0;
+      transition: all 0.3s;
+    }
+
+    .philosophy-card:hover {
+      border-color: #7a9abd;
+      box-shadow: 0 8px 24px rgba(122, 154, 189, 0.08);
+      transform: translateY(-4px);
+    }
+
+    .philosophy-card h4 {
+      color: #4a5f7f;
+      margin-bottom: 1rem;
+      font-size: 1.25rem;
+      font-weight: 600;
+    }
+
+    .philosophy-card p {
+      color: #5a6f8f;
+      font-size: 0.95rem;
+      line-height: 1.7;
+    }
+
+    .cta-section {
+      padding: 4rem 2rem;
+      background: linear-gradient(135deg, #e8f1f9 0%, #f0f4f8 100%);
+      text-align: center;
+    }
+
+    .cta-section h3 {
+      font-size: 1.8rem;
+      color: #2d3748;
+      margin-bottom: 1.5rem;
+      font-weight: 700;
+    }
+
+    .cta-section p {
+      font-size: 1.05rem;
+      color: #4a5f7f;
       margin-bottom: 2rem;
       max-width: 600px;
       margin-left: auto;
       margin-right: auto;
     }
 
-    .cta-button {
-      display: inline-block;
-      background: linear-gradient(135deg, #d4af37 0%, #f0d870 100%);
-      color: #0f0f1e;
-      padding: 1rem 2.5rem;
-      text-decoration: none;
-      border-radius: 50px;
-      font-weight: bold;
-      transition: all 0.3s;
-      border: 2px solid #d4af37;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
-    }
-
-    .services {
-      padding: 6rem 2rem;
-      background: rgba(26, 15, 46, 0.5);
-    }
-
-    .services h3 {
-      text-align: center;
-      font-size: 2.5rem;
-      color: #d4af37;
-      margin-bottom: 3rem;
-    }
-
-    .service-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 2rem;
-    }
-
-    .service-card {
-      background: rgba(212, 175, 55, 0.05);
-      border: 1px solid #d4af37;
-      border-radius: 10px;
-      padding: 2rem;
-      text-align: center;
-      transition: all 0.3s;
-    }
-
-    .service-card:hover {
-      background: rgba(212, 175, 55, 0.15);
-      transform: translateY(-5px);
-      box-shadow: 0 10px 25px rgba(212, 175, 55, 0.2);
-    }
-
-    .service-icon {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-    }
-
-    .service-card h4 {
-      color: #d4af37;
-      margin-bottom: 1rem;
-      font-size: 1.3rem;
-    }
-
-    .service-card p {
-      color: #b8b8d8;
-      font-size: 0.95rem;
-    }
-
     footer {
-      background: rgba(15, 15, 30, 0.95);
-      border-top: 2px solid #d4af37;
-      padding: 2rem;
+      background: #2d3748;
+      padding: 3rem 2rem;
       text-align: center;
-      color: #888;
+      color: #cbd5e0;
+      font-size: 0.9rem;
+    }
+
+    footer p {
+      margin-bottom: 0.5rem;
     }
 
     @media (max-width: 768px) {
       h1 {
-        font-size: 1.5rem;
+        font-size: 1.4rem;
       }
 
       nav a {
-        margin-left: 1rem;
+        margin-left: 1.5rem;
         font-size: 0.9rem;
       }
 
-      .hero h2 {
-        font-size: 2rem;
+      .hero {
+        grid-template-columns: 1fr;
+        padding: 2rem 2rem;
       }
 
-      .services h3 {
+      .hero-content h2 {
         font-size: 1.8rem;
+      }
+
+      .philosophy h3 {
+        font-size: 1.5rem;
+      }
+
+      .cta-section h3 {
+        font-size: 1.3rem;
       }
     }
   </style>
@@ -177,9 +228,9 @@
 <body>
   <header>
     <div class="container">
-      <h1>&#x2727; Caromancie</h1>
+      <h1>Caromancie</h1>
       <nav>
-        <a href="#services">Services</a>
+        <a href="#philosophie">Approche</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
@@ -187,43 +238,49 @@
 
   <main>
     <section class="hero">
-      <h2>Devoilez vos mysteres</h2>
-      <p>Explorez les messages caches du tarot et des cartes. Des lectures intuitives pour illuminer votre chemin.</p>
-      <a href="#contact" class="cta-button">Reserver une lecture</a>
+      <div class="hero-content">
+        <h2>Trouve tes buts, vivez ta passion</h2>
+        <p>Les cartes ne mentent pas. Elles revelent ce que tu cherches — tes blocages, tes possibilites, ta vraie direction.</p>
+        <p>Une consultation pour clarifier ton chemin, decouvrir ce qui t'appelle vraiment, et agir avec certitude.</p>
+        <a href="#contact" class="cta-button">Reserver une consultation</a>
+      </div>
+      <div class="hero-image">
+        <img src="images/hero_caromancie.png" alt="Caromancie">
+      </div>
     </section>
 
-    <section class="services" id="services">
-      <h3>Nos Services</h3>
-      <div class="service-grid">
-        <div class="service-card">
-          <div class="service-icon">&#x2665;</div>
-          <h4>Tarot Amour</h4>
-          <p>Explorez les dynamiques romantiques et les connexions emotionnelles qui vous attendent.</p>
+    <section class="philosophy" id="philosophie">
+      <h3>Ma philosophie</h3>
+      <div class="philosophy-grid">
+        <div class="philosophy-card">
+          <h4>Tes objectifs comptent</h4>
+          <p>Sans but, la vie est fade. Je t'aide a identifier ce qui te fait vraiment avancer — tes vrais objectifs, pas ceux des autres.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#x272F;</div>
-          <h4>Tarot Destinee</h4>
-          <p>Recevez des guidances sur votre chemin de vie et les opportunites qui s'offrent a vous.</p>
+        <div class="philosophy-card">
+          <h4>La passion est ta force</h4>
+          <p>Ce qui te fait lever le matin ? C'est la passion. Je te guide pour la trouver, la cultiver, la vivre pleinement.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#x269E;</div>
-          <h4>Numerologie</h4>
-          <p>Decouvrez les vibrations et messages caches dans vos nombres personnels.</p>
+        <div class="philosophy-card">
+          <h4>Donne & recois</h4>
+          <p>Pas de reception sans donation. Une consultation authentique ou tu ouvres vraiment tes portes pour recevoir la guidance dont tu as besoin.</p>
         </div>
-        <div class="service-card">
-          <div class="service-icon">&#x25CF;</div>
-          <h4>Guidance Intuitive</h4>
-          <p>Laissez-vous guider par l'intuition pour trouver les reponses que vous cherchez.</p>
+        <div class="philosophy-card">
+          <h4>Reste enfant</h4>
+          <p>Sois legere, amuse-toi, reste connectee a ta jeunesse interieure. C'est ca qui rend la vie belle et pleine de sens.</p>
         </div>
       </div>
     </section>
+
+    <section class="cta-section" id="contact">
+      <h3>Parlons de ton chemin 💙</h3>
+      <p>Tu te poses des questions ? Tu sens qu'il y a quelque chose d'autre ? Une consultation t'aide a y voir clair.</p>
+      <p style="font-size: 0.9rem; color: #4a5f7f; margin-top: 1.5rem;">Reservations et consultations en ligne — contacte moi pour les modalites !</p>
+    </section>
   </main>
 
-  <footer id="contact">
-    <div class="container">
-      <p>Caromancie &copy; 2026 — Lectures authentiques et guidances intuitives</p>
-      <p style="margin-top: 1rem; font-size: 0.9rem;">Prochainement : reservations et consultations en ligne</p>
-    </div>
+  <footer>
+    <p>Caromancie &copy; 2026</p>
+    <p>Guidances authentiques pour tes vraies questions</p>
   </footer>
 </body>
 </html>
