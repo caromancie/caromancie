@@ -9,7 +9,7 @@ read -p "Continuer l'envoi ? (y/n) " -n 1 -r
 echo ""
 
 if [[ $REPLY =~ ^[Yy]$ ]]; then
-  read -p "Message de commit: " message
+  read -p "Nom de la mise à jour : " message
 
   if [ -z "$message" ]; then
     message="Update changes"
