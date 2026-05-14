@@ -19,10 +19,15 @@ if [[ $REPLY =~ ^[Yy]$ ]]; then
   echo "🚀 Envoi en cours..."
   git add -A
   git commit -m "$message"
-  git push
 
-  echo ""
-  echo "✅ Envoyé!"
+  if ! git push 2>&1 | grep -q "no upstream"; then
+    echo "✅ Envoyé!"
+  else
+    echo "⚠️  Pas d'upstream, je le configure..."
+    BRANCH=$(git rev-parse --abbrev-ref HEAD)
+    git push --set-upstream origin "$BRANCH"
+    echo "✅ Envoyé!"
+  fi
 else
   echo "❌ Annulé"
 fi
